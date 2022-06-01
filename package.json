@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
   "author": "Udacity - jose.morales@udacity.com",
   "license": "ISC",
@@ -20,10 +21,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hue899/PrivateBlockchain.git"
+    "url": "git+https://github.com/Hue899/privateblockchain.git"
   },
   "bugs": {
-    "url": "https://github.com/Hue899/PrivateBlockchain/issues"
+    "url": "https://github.com/Hue899/privateblockchain/issues"
   },
-  "homepage": "https://github.com/Hue899/PrivateBlockchain#readme"
+  "homepage": "https://github.com/Hue899/privateblockchain#readme"
 }

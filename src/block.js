@@ -67,16 +67,14 @@ class Block {
      */
     getBData() {
         let self = this;
-        let data = hex2ascii(self.body); // Decoding the data
-        let decodedData = JSON.parse(data); // Getting the data as a javascript object
-        return new Promise(async (resolve, reject) => {
-            if (this.height == 0) {
-                reject(new Error('Genesis Block'));
+        return new Promise((resolve, reject) => { // Return a new promise to allow the method be called asynchronous
+            const body = hex2ascii(self.body); // Decoding the data
+            const block = JSON.parse(body);  // Resolve with the data if the object isn't the Genesis block
+            if (block.data == 'Genesis Block') { // Reject with an error if the object is the Genesis block
+                // reject(null); //Why? :- reject on genesis block was giving exception
+                resolve(block)
             }
-            else {
-                resolve(decodedData);
-            }
-
+            resolve(block);
         });
     }
 
